@@ -1,0 +1,82 @@
+Responder las siguientes pregunta. Las respuestas deben ser explicaciones
+detalladas.
+
+1) ¿Cómo está compuesta una base de datos?
+2)  a_ ¿Qué es una tabla?
+    b_ ¿Qué puedo encontrar en ella?
+3) ¿Cómo se crea una base de datos?
+4) ¿Qué tipos de datos se pueden utilizar para ingresar nombres y números?
+5)  a_ ¿Cómo se crea una tabla? 
+    b_ ¿Qué siginifica cada parte de la consulta?
+    c_ ¿El nombre de la tabla debe ser singular o plural?
+6) ¿Cómo inserto datos en la tabla?
+7) ¿Cómo se hace para ver todos los datos que ingresé hasta el momento?
+8) Dada una tabla de personas con el nombre, la edad y el dni de cada uno de ellos,responder:
+    a- ¿Cómo se hace para cambiar el nombre a una persona que se llama Anacleto y tiene como dni el número 14235234? El nuevo nombre deberá ser Favio.
+    b- ¿Cómo se hace para cambiar el nombre a una persona que se llama Anacleto y tiene 80 años? El nuevo nombre deberá ser Pablo.
+    c- ¿Cómo se hace para cambiar la dirección a todos los integrantes de la familia con apellido Equis?
+    d- ¿Cómo se hace para eliminar a todos los integrantes de la familia Gamboa de la base de datos?
+    e- ¿Cómo se hace para ver los datos de todas las personas mayores de edad registradas?
+    f- ¿Cómo se hace para ver los datos de todas las personas que son mayores de edad y se llamen Roberto?
+    g- ¿Cómo se hace para ver los nombres de la familia Equis?
+    h- ¿Còmo se hace para ver las edades de la familia Equis?
+    i- ¿Còmo se hace para ver todos los datos de las personas menores de edad de la familia Equis?
+
+
+1) Pueden estar compuestas por miles de tablas, que a su vez estan compuestas de filas y columnas que sirven para almacenar y ordenar información
+
+
+2) a_ Una tabla es un conjunto de datos ordenados en una serie de filas y columnas
+   b_ Se puede encontrar cualquier tipo de informacion que este almacenada en ella
+
+
+3) Una base de datos se crea usando el comando "CREATE DATABASE nombre_base_de_datos;"
+
+
+4) Se pueden utilizar datos tipo "VARCHAR" para nombres y para números "INT" y "FLOAT".
+
+
+
+5) a_Una tabla se crea utilizando el comando "CREATE TABLE nombre_tabla" y asignandole que tipo de datos va a 
+     almacenar añadiendole "(nombre_var (INT/VARCHAR/FLOAT));"
+
+   b_CREATE ------------> Significa crear
+     TABLE -------------> Significa tabla
+     nombre_tabla-------> Es el nombre que va a tener la tabla
+     nombre_var---------> Es el nombre que va a tener la variable
+     VARCHAR/INT/FLOAT--> Es el tipo de dato que es la varriable 
+
+   c_No es relevante para el programa si el nombre de la tabla es plural o singular.
+
+
+6) Se insertan datos utilizando los comandos
+        "INSERT INTO nombre_tabla (nombre var = (INT/VARCHAR/FLOAT));"
+
+
+7) Para ver todos los datos utilizados se usan los comandos
+        "SELECT * FROM nombre_tabla;"
+
+
+8)a-    UPDATE      tabla SET      nombre = "Favio"     WHERE      dni = 14235234;
+
+  b-    UPDATE      tabla SET      nombre = "Pablo"     WHERE     edad = 80        AND nombre = "Anacleto";
+
+  c-    UPDATE      tabla SET   direccion = "Gerli"     WHERE apellido = "Equis";    
+     
+  d-    DELETE FROM tabla WHERE  apellido = "Gamboa";
+
+  e-    SELECT*FROM tabla WHERE     edad >=18;
+
+  f-    SELECT*FROM tabla WHERE     edad >= 18          AND     nombre = "Roberto";
+
+  g-    SELECT     nombre WHERE  apellido = "Equis"     FROM tabla;
+
+  h-    SELECT       edad WHERE  apellido = "Equis"     FROM tabla;
+
+  i-    SELECT*FROM tabla WHERE  apellido = "Equis"     AND      edad <=18;
+
+
+
+
+
+
