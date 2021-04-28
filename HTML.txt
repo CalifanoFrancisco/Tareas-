@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="estilo.css">
+  <title>Experimentos</title>
+</head>
+<body>
+
+      <FONT FACE="arial" COLOR="#dc143c" >Titulo 1</FONT>
+      <img src="perro.jpeg" alt="imagen de perrito">
+
+      <FONT FACE="times new roman" COLOR="#98fb98">Titulo 2</FONT>
+      <img src="pajado.jpeg" alt="imagen de pajado">
+
+      <FONT FACE="courier" COLOR="#fa8072">A la estratosfera!</FONT>
+      <img src="menem.jpeg" alt="imagen de menem">
+
+</body>
+</html>
