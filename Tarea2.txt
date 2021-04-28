@@ -1,0 +1,70 @@
+Responder las siguientes pregunta. Las respuestas deben ser explicaciones detalladas.
+
+1) ¿Cómo está compuesta una base de datos?
+        Una base de datos esta compusta de minimamente 1 taba a infinitas. Y estas tablas se dividen en columnas y filas
+
+2)  a_ ¿Qué es una tabla?
+        Una tabla es una forma ordenada de almacenar informacion en filas y columnas
+    b_ ¿Qué puedo encontrar en ella?
+        Se puede encontrar cualquier cosa que haya sido almacenada en ella
+
+3) ¿Cómo se crea una base de datos?
+    Se crea utilizando el comando:
+        CREATE DATABASE nombre;
+
+4) ¿Qué tipos de datos se pueden utilizar para ingresar nombres y números?
+    Se puede utilizar VARCHAR para palabras, INT para numeros enteros y FLOAT para numeros con coma
+
+5)  a_ ¿Cómo se crea una tabla? 
+        Una tabla se crea utilizando el comando:
+            CREATE TABLE tabla (varnom VARCHAR(50));
+
+    b_ ¿Qué siginifica cada parte de la consulta?
+        CREATE-----> Crear
+        TABLE------> Tabla
+        tabla------> Nombre de la tabla
+        varnom-----> Nombre de la variable
+        VARCHAR----> Tipo de dato 
+        (50)-------> Cantidad de "Espacios" en la variable
+
+    c_ ¿El nombre de la tabla debe ser singular o plural?
+        No es relevante para el programa si es singular o plural.
+
+6) ¿Cómo inserto datos en la tabla?
+        INSERT INTO tabla (varnom = "valor");
+
+7) ¿Cómo se hace para ver todos los datos que ingresé hasta el momento?
+        SELECT*FROM tabla;
+
+8) Dada una tabla de personas con el nombre, la edad y el dni de cada uno de ellos,responder:
+    a- ¿Cómo se hace para cambiar el nombre a una persona que se llama Anacleto y tiene como dni el número 14235234? El nuevo nombre deberá ser Favio.
+    b- ¿Cómo se hace para cambiar el nombre a una persona que se llama Anacleto y tiene 80 años? El nuevo nombre deberá ser Pablo.
+    c- ¿Cómo se hace para cambiar la dirección a todos los integrantes de la familia con apellido Equis?
+    d- ¿Cómo se hace para eliminar a todos los integrantes de la familia Gamboa de la base de datos?
+    e- ¿Cómo se hace para ver los datos de todas las personas mayores de edad registradas?
+    f- ¿Cómo se hace para ver los datos de todas las personas que son mayores de edad y se llamen Roberto?
+    g- ¿Cómo se hace para ver los nombres de la familia Equis?
+    h- ¿Còmo se hace para ver las edades de la familia Equis?
+    i- ¿Còmo se hace para ver todos los datos de las personas menores de edad de la familia Equis?
+
+--a 
+UPDATE tabla SET nombre = "Favio" WHERE dni = 14235234 AND nombre = "Anacleto";
+--b
+UPDATE tabla SET nombre = "Pablo" WHERE nombre = "Anacleto" AND edad = 80;
+--c
+UPDATE tabla SET direccion = "Gerli" WHERE apellido = "Equis";
+--d    
+DELETE FROM tabla WHERE  apellido = "Gamboa";
+--e
+SELECT*FROM tabla WHERE  edad >=18;
+--f
+SELECT*FROM tabla WHERE  edad >= 18 AND nombre = "Roberto";
+--g
+SELECT nombre WHERE apellido = "Equis" FROM tabla;
+--h
+SELECT edad WHERE apellido = "Equis" FROM tabla;
+--i
+SELECT*FROM tabla WHERE apellido = "Equis" AND edad <=18;
+
+
+
